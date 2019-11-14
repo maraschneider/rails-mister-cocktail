@@ -4,6 +4,5 @@ class Dose < ApplicationRecord
 
   validates :description, presence: true, allow_blank: false
   validates :cocktail_id, :ingredient_id, presence: true
-  validates :cocktail_id, :uniqueness => { :scope => :ingredient_id }
-
+  validates :cocktail_id, uniqueness: { scope: :ingredient_id }
 end
