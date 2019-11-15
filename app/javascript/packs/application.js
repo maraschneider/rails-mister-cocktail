@@ -16,5 +16,8 @@
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap';
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+
+initUpdateNavbarOnScroll();
 
 console.log('Hello World from Webpacker')
