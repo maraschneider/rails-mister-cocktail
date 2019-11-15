@@ -19,7 +19,7 @@ url_cocktail = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a"
 
 cocktails = JSON.parse(open(url_cocktail).read)
 
-cocktails["drinks"][0..20].reverse.each do |new_c|
+cocktails["drinks"][0..20].each do |new_c|
   if Ingredient.exists?(["name = ?", "#{new_c["strIngredient1"]}"])
     ingredient_one = Ingredient.find_by("name = ?", new_c["strIngredient1"])
   else
