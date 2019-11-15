@@ -1,0 +1,23 @@
+.banner {
+  background-image: asset-url("banner.jpg");
+  background-size: cover;
+
+  height: 100vh;
+  color: white;
+  text-align: center;
+  padding-top: 40vh;
+
+}
+
+.form {
+  justify-content: center;
+}
+
+.a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+      color: white;
+  text-decoration: none;
+  }
+}

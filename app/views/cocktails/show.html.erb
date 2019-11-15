@@ -1,1 +1,24 @@
-<h1><%= @cocktail.name %></h1>
+<div class="cocktail-container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @cocktail.image_url %>)">
+  <h1><%= @cocktail.name %></h1>
+  <%#= image_tag "#{@cocktail.image_url}", alt: "alttext", class:"cocktail_image" %>
+  <div class="text-bg">
+  <div class="instruction-card">
+    <%= @cocktail.instructions %>
+  </div>
+  <div class="ingredients-list">
+    <% @cocktail.doses.each do |dose| %>
+      <div>
+        <%= dose.description %>
+        <%= dose.ingredient.name %>
+        <%= link_to dose_path(dose.id), method: "delete" do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+    <div class="btn-container">
+      <%= link_to 'Back to Cocktails',  cocktails_path, class: "btn btn-warning"%>
+      <%= link_to 'Edit Recipe', new_cocktail_dose_path(@cocktail), class: "btn btn-warning" %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+  <div class="card" >
+    <%= image_tag "#{cocktail.image_url}", alt: "image of cocktail", class: "cocktail-img" %>
+    <div class="card-body">
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <p class="card-text">
+        <% cocktail.doses.each do |dose| %>
+        <%= dose.ingredient.name %> |
+         <% end %>
+      </p>
+      <%= link_to 'More Info', cocktail_path(cocktail), class: "btn btn-warning" %>
+      <a href="#" ></a>
+    </div>
+  </div>

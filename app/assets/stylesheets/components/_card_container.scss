@@ -1,0 +1,12 @@
+.card-container {
+  width: 80vw;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.cocktail-img {
+  object-fit: cover;
+  height: 300px;
+}

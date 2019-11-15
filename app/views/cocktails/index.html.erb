@@ -1,6 +1,6 @@
-<h1>All Cocktails</h1>
-<ul>
-<% @cocktails.each do |cocktail| %>
-  <li><%= cocktail.name %></li>
-<% end %>
-</ul>
+<%= render 'shared/navbar' %>
+<%= render 'shared/banner' %>
+
+<div class="card-container">
+<%= render partial: "shared/cocktail", collection: @cocktails, as: :cocktail %>
+</div>
