@@ -4,7 +4,11 @@
       <h5 class="card-title"><%= cocktail.name %></h5>
       <p class="card-text">
         <% cocktail.doses.each do |dose| %>
-        <%= dose.ingredient.name %> |
+          <% if dose == cocktail.doses[-1] %>
+            <%= dose.ingredient.name %>
+          <% else %>
+            <%= dose.ingredient.name %> |
+          <% end %>
          <% end %>
       </p>
       <%= link_to 'More Info', cocktail_path(cocktail), class: "btn btn-warning" %>
