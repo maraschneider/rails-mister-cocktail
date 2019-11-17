@@ -1,6 +1,3 @@
-<div class="ingredients-list">
-  <strong>You will need following ingredients:</strong>
-  <% @cocktail.doses.each do |dose| %>
     <div>
       <%= dose.description %>
       <%= dose.ingredient.name %>
@@ -8,5 +5,3 @@
         <i class="far fa-trash-alt"></i>
       <% end %>
     </div>
-  <% end %>
-</div>
