@@ -1,0 +1,12 @@
+<div class="ingredients-list">
+  <strong>You will need following ingredients:</strong>
+  <% @cocktail.doses.each do |dose| %>
+    <div>
+      <%= dose.description %>
+      <%= dose.ingredient.name %>
+      <%= link_to dose_path(dose.id), method: "delete", class: "text-warning", data: { confirm: "Are you sure?" } do %>
+        <i class="far fa-trash-alt"></i>
+      <% end %>
+    </div>
+  <% end %>
+</div>
