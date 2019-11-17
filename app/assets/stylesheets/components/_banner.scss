@@ -1,3 +1,10 @@
+body {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+}
 .banner {
   background-image: asset-url("banner.jpg");
   background-size: cover;
@@ -6,7 +13,6 @@
   color: white;
   text-align: center;
   padding-top: 40vh;
-
 }
 
 .form {
@@ -21,3 +27,4 @@ a {
   text-decoration: none;
   }
 }
+
