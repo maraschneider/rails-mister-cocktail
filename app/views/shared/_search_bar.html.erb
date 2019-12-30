@@ -1,0 +1,10 @@
+<div class="mx-auto" style="width: 350px;">
+ <%= form_tag cocktails_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-check form-check-inline p-1",
+    placeholder: "Find a cocktail"
+  %>
+  <%= submit_tag "Search", class: "btn btn-warning form-check form-check-inline" %>
+<% end %>
+</div>
