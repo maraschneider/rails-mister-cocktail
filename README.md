@@ -1,24 +1,35 @@
-# README
+# CocktailBook 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Rails 
 
-Things you may want to cover:
+The default Rails template with webpack and postgres as database was used to bootstrap the project:
 
-* Ruby version
+`rails new rails-mister-cocktail -T --webpack --database=postgresql`
 
-* System dependencies
+### Database creation and initialization
 
-* Configuration
+```
+rails db:create
+rails db:migrate
+rails db:seed # for sample data
+```
 
-* Database creation
+### Running the project
+You can install dependencies and run the project in development mode with:
 
-* Database initialization
+```
+cd my-app
+npm install # or yarn
+bundle install
+rails server
+```
+Open up localhost:3000.
 
-* How to run the test suite
+### Deployment
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+git push heroku master
+heroku run rails db:migrate
+heroku open
 
-* Deployment instructions
-
-* ...
+```
